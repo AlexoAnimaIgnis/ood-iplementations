@@ -1,19 +1,16 @@
 package com.demo.ood.tennis
 
-class AdvantageState(
-    private val advantagedPlayer: Player,
-    private val game: Game
-) : GameState {
+class AdvantageState(private val advantagedPlayer: Player) : GameState {
 
     override fun addPoint(player: Player, opponent: Player, game: Game) {
-        if(player == advantagedPlayer) {
-            game.winGame(player)
+        if (player == advantagedPlayer) {
+            game.winGame(player) // Player with advantage wins
         } else {
-            game.setState(DeuceGameState(game))
+            game.setState(DeuceState()) // Return to Deuce if the other player wins a point
         }
     }
 
     override fun getScore(player: Player, opponent: Player): String {
-        return "advantage ${advantagedPlayer.name}"
+        return "Advantage ${advantagedPlayer.name}"
     }
 }

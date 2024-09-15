@@ -4,7 +4,7 @@ package com.demo.ood.tennis
 /**
  * handle normal scoring progression (0,15,30,40)
  */
-class NormalGameState(private val game: Game) : GameState {
+class NormalScoringState : GameState {
 
     override fun addPoint(player: Player, opponent: Player, game: Game) {
         when (player.points) {
@@ -13,9 +13,9 @@ class NormalGameState(private val game: Game) : GameState {
             30 -> player.points = 40
             40 -> {
                 if (opponent.points == 40) {
-                    // handle deuce
+                    game.setState(DeuceState()) // Move to Deuce if both reach 40
                 } else {
-                    // handle win
+                    game.winGame(player) // Player wins the game
                 }
             }
         }

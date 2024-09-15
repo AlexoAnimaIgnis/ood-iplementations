@@ -1,6 +1,6 @@
 package com.demo.ood.tennis
 
-class Player(name: String) {
+class Player(val name: String) {
     var points: Int = 0
     var gamesWon: Int = 0
     var setsWon: Int = 0
