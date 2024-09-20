@@ -1,4 +1,4 @@
-package com.demo.designprinciples.s
+package com.demo.designprinciples.srp
 
 /**
  * this class breaks the SRP Principle as it does a lot of things unrelated.

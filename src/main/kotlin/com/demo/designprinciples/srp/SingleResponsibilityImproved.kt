@@ -1,4 +1,4 @@
-package com.demo.designprinciples.s
+package com.demo.designprinciples.srp
 
 /**
  * Responsible for managing user data
