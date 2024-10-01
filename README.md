@@ -1,2 +1,3 @@
-# ood-iplementations
-Object Oriented Design Implementation
+# ood-implementations
+
+Object-Oriented Design Implementation
